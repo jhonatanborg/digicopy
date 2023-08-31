@@ -57,7 +57,7 @@ while($lista_id = mysqli_fetch_assoc($resultado_produto)) {
 
 
 
-$dispon = "SELECT SUM(quantidade) AS quantidade FROM impressao WHERE id_produto = '$lista' AND NOT status = 2 AND NOT status = 0 AND NOT status = 5";
+$dispon = "SELECT SUM(quantidade) AS quantidade FROM impressao WHERE id_produto = '$lista' AND NOT status = 2 AND NOT status = 0 AND NOT status = 5 AND NOT status = 1";
 
 $disponivel = mysqli_query($conn, $dispon);
 
@@ -94,4 +94,3 @@ echo '<script>alert(\'Quantidade em estoque indisponível, tente uma quantidade 
 }
 
 ?>
-
